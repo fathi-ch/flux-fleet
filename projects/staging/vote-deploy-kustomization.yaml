@@ -5,4 +5,4 @@ metadata:
   name: vote
   namespace: instavote
 spec:
-  path: ./flux/staging
+  path: ./kustomize/vote/staging
