@@ -5,16 +5,13 @@ metadata:
   namespace: instavote
 spec:
   interval: 1m0s
-  path: ./kustomize/vote/staging
+  path: ./kustomize/vote/staging         # ✅ Precise path
   prune: true
-  serviceAccountName: instavote
-  targetNamespace: instavote
   sourceRef:
     kind: GitRepository
     name: vote
-    namespace: instavote
-  timeout: 3m0s
+  targetNamespace: instavote
   healthChecks:
     - kind: Deployment
       name: vote
-      namespace: instavote
+  timeout: 3m0s
