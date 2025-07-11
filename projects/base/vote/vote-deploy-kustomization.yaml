@@ -5,14 +5,15 @@ metadata:
   namespace: instavote
 spec:
   interval: 1m0s
-  path: ./kustomize/vote/staging         # ✅ Precise path
+  path: ./kustomize/vote/staging
   prune: true
   sourceRef:
     kind: GitRepository
     name: vote
   targetNamespace: instavote
   healthChecks:
-    - kind: Deployment
+    - apiVersion: apps/v1         # ✅ Add this
+      kind: Deployment
       name: vote
-      namespace: instavote
+      namespace: instavote        # ✅ Explicitly set namespace
   timeout: 3m0s
