@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   # - ../base/facebooc
-  - ../base/instavote
+  - ../base/vote
 patches:
   # - path: facebooc-deploy-kustomization.yaml
   #   target:
