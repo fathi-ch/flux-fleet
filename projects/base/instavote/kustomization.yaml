@@ -4,3 +4,4 @@ resources:
 - instavote-deploy-gitrepo.yaml
 - instavote-deploy-kustomization.yaml
 - rbac.yaml
+- vote-deployment.yaml
