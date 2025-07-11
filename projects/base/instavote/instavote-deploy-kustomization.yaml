@@ -11,4 +11,4 @@ spec:
   serviceAccountName: instavote
   sourceRef:
     kind: GitRepository
-    name: instavote-deploy
+    name: vote
