@@ -1,14 +1,14 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  # - ../base/facebooc
+  - ../base/facebooc
   - ../base/vote
 patches:
-  # - path: facebooc-deploy-kustomization.yaml
-  #   target:
-  #     kind: Kustomization
-  #     name: facebooc
-  #     namespace: facebooc
+  - path: facebooc-deploy-kustomization.yaml
+    target:
+      kind: Kustomization
+      name: facebooc
+      namespace: facebooc
   - path: vote-deploy-kustomization.yaml
     target:
       kind: Kustomization
